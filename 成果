@@ -66,7 +66,7 @@ def parse_tw_lotto_html(data_Info,number_count):
         Sum_record = Sum_record + Sum[i]
     Sum_record = Sum_record/record                                              #所有期數數字和的平均
     return data_Info_List,data_Info_Dict            
-data = {'p1': '102001', 'p2': '108111', 'l': '0', 'type': '1'}                      #p1:第一筆資料  p2:最後一筆資料
+data = {'p1': '093001', 'p2': '108112', 'l': '0', 'type': '1'}                      #p1:第一筆資料  p2:最後一筆資料
 head_Html_lotto='http://m.9800.com.tw/statistics.asp'
 res = requests.post(head_Html_lotto, data=data, timeout=30)
 soup = BeautifulSoup(res.text,'lxml')
@@ -142,4 +142,4 @@ for i in range(0,len(pred_num)-1):
                 pred_num[j+1] = tmp
 #將預測結果由小到大排列
 
-print(pred_num)                                                                                 #預測結果
+print(pred_num)    
